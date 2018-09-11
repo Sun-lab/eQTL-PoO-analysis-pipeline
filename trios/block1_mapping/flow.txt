@@ -1,0 +1,17 @@
+This block needs: 
+tophat (or other mapper of choice)
+R packages: ShortReads, GenomicAlignments, GenomicFeatures, Rsamtools
+
+
+provided code assumes SLURM scheduler
+one needs to change a root folder and put the data in an appropriate subfolder
+
+overall flow is:
+step1 - trim the data
+step2 - map
+step3 - get short fastqc
+step4 - filter out by quality
+step5 - get gene level counts
+step6 - convert counts to TRECASE_MLE format 
+#note, we only keep the genes which have at least two individuals having at least 5 allele specific counts
+#these processing steps are done for each chromosome

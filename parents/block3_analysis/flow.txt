@@ -1,0 +1,24 @@
+This block needs: 
+1 R libraries 
+- library(asSeq)
+- library("GenomicAlignments")
+- library("GenomicFeatures")
+- library("Rsamtools")
+2 C code TRECASE_MLE
+
+
+overall flow is:
+
+
+#these processing steps are done for each individual
+step8 - classify reads having at least one SNP to coming from one parent or another 
+(for this dataset we can't say which is mother and which is father)
+and get a gene-level count
+Note: check that number of _hapN is not large as a control as well as _hap1 and _hap2 are comparable
+
+#this step is done on the results of all individuals processed before
+step9 - few checks and conversion to TRECASE_MLE format
+
+#this step is done for each chromosome
+step10 - run TRECASE_MLE (we had several runs with various criterios including forcing a particular SNP to be used in order to estimate effect size)
+step11 - collect the results from TRECASE_MLE

@@ -1,0 +1,22 @@
+This block needs: 
+0 plink
+1 liftover for remapping between references
+2 shapeit2 for phasing
+3 impute v.2 for imputation
+
+used omni VCF data for GEUVADIS project
+ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase1/analysis_results/supporting/omni_haplotypes/
+
+overall flow is:
+
+
+#these processing steps are done for each chromosome
+step0 - format the data to shapeit compatible format
+step1 - first run shapeit to get a list of non-matching SNPs (will be compared to step 2 and excluded in step 3)
+step2 - second run of shapeit with a flipped list of SNPs con confirm that excluded SNPs are not excluded due to wrong strand)
+step4 - run phaseit with final set of SNPs (excluding those non-matching in step1)
+
+#this processing step is done at 5Mb step for each chromosome
+step5 - imputation
+step6,7 - get snps for allele-specific read classification and counting, consider only SNPs surely heterozygous SNPs
+step8,9 - produce another set of SNPs reformatted to VCF format as needed for TRECASE_MLE option

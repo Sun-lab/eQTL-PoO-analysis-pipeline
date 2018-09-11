@@ -1,0 +1,30 @@
+SAMPLE_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/counts/parplus_conv/samples.dat
+SAMPLE_FILE_HEADER = TRUE
+SAMPLE_COVARIATE_COLUMN = 2 3 4 5 #default is none
+
+
+GENE_INFO_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/counts/parplus_conv/gene_info_chr  .dat
+GENE_INFO_FILE_HEADER = TRUE
+GENE_ID_COLUMN = 1
+GENE_POS_START_COLUMN = 3
+GENE_POS_END_COLUMN = 4		
+
+
+GENE_TCOUNT_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/counts/parplus_conv/gene_Tcount_chr  .dat
+GENE_A1COUNT_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/counts/parplus_conv/gene_a1_chr  .dat
+GENE_A2COUNT_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/counts/parplus_conv/gene_a2_chr  .dat
+
+
+SNP_VCF_FILE = /lustre/scr/z/h/zhabotyn/R01/omnidata/vcf/SNP_VCF_chr  .vcf
+
+
+OUTPUT_FILE = /lustre/scr/z/h/zhabotyn/R01/omnipipe/out2e5/results_chr  .out
+
+
+LOCAL_SNP_WINDOW = 200000    #default is 200000
+MAF_CUTOFF = 0.05            #default is 0.05
+CORR2_PRUNING = 0.9          #default is 0.9
+
+
+
+

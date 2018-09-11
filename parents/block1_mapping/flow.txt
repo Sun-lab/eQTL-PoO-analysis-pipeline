@@ -1,0 +1,17 @@
+This block needs: 
+tophat (or other mapper of choice)
+R packages: ShortReads, GenomicAlignments, GenomicFeatures, Rsamtools
+
+overall flow is:
+
+
+#these processing steps are done for each chromosome
+step1 - trim the data
+step2 - map
+step3 - get short fastqc
+step4 - filter out by quality
+step5 - get gene level counts
+step6 - convert to TRECASE_MLE format
+this step is done on 227 selected GEUVADIS samples
+#note, for this larger number of samples we choose genes having at least 5 samples with at least 5 allele specific counts
+#note, we do see that PC1, PC2 and PC3 reflect whether people are GBR, FIN or TSI so in analysis use actual GBR, FIN and TSI grouping
